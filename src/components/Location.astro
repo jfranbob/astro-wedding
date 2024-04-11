@@ -1,0 +1,41 @@
+---
+// Componente Location.astro
+const props = Astro.props;
+const { title, address, mapLink } = props;
+---
+
+<div class="location">
+    <h3>{title}</h3>
+    <p>{address}</p>
+    {
+        mapLink ? (
+            <a href={mapLink} target="_blank" rel="noopener noreferrer">
+                Ver en Google Maps
+            </a>
+        ) : (
+            ""
+        )
+    }
+</div>
+
+<style>
+    .location {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
+    .location h3 {
+        margin-top: 0;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>

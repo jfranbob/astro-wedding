@@ -1,0 +1,110 @@
+/* Establece fuentes y colores base */
+:root {
+    --font-primary: 'Georgia', serif;
+    --font-secondary: 'Arial', sans-serif;
+    --color-primary: #6a4f4b; /* Marrón suave */
+    --color-secondary: #d3bcb1; /* Beige */
+    --color-accent: #a87d6d; /* Marrón claro */
+    --color-bg: #fdfbf7; /* Casi blanco */
+    --color-text: #333333; /* Casi negro */
+  }
+  
+  /* Reset básico y estilos generales */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    color: var(--color-primary);
+    margin-top: 0;
+  }
+  
+  p {
+    margin-bottom: 1em;
+  }
+  
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Botones y formularios */
+  button,
+  input[type="submit"] {
+    font-family: var(--font-secondary);
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: var(--color-primary);
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: var(--font-primary);
+  }
+  
+  /* Clases de utilidad */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Componentes específicos */
+  .header {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .gallery-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .footer {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  

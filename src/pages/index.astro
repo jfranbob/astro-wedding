@@ -1,0 +1,48 @@
+---
+// Importar componentes y hojas de estilo
+import Header from "../components/Header.astro";
+import Countdown from "../components/Countdown.jsx";
+import Gallery from "../components/Gallery.astro";
+import Timeline from "../components/Timeline.astro";
+import Location from "../components/Location.astro";
+import RSVPForm from "../components/RSVPForm.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+// Fecha de la boda para el countdown
+const weddingDate = "2024-09-12";
+---
+
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Invitación a Nuestra Boda</title>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section>
+				<h1>Bienvenidos a Nuestra Boda</h1>
+				<p>
+					Estamos emocionados de compartir este momento especial con
+					ustedes. Aquí encontrarán toda la información necesaria para
+					el gran día.
+				</p>
+			</section>
+			<Countdown date={weddingDate} client:load />
+			<Gallery />
+			<Timeline />
+			<Location
+				title="Ceremonia"
+				address="Jardín de las Rosas, Calle Flores, 123"
+				mapLink="https://maps.example.com/link-to-ceremony-location"
+			/>
+			<Location
+				title="Celebración"
+				address="Salón de Celebraciones, Calle Principal, 456"
+				mapLink="https://maps.example.com/link-to-celebration-location"
+			/>
+			<RSVPForm />
+		</main>
+		<Footer />
+	</body>
+</html>

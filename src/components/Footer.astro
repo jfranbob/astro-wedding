@@ -1,0 +1,33 @@
+---
+// Componente Footer.astro
+const year = new Date().getFullYear();
+const contactEmail = "info@nuestraboda.com"; // Cambia esto por tu correo electrónico de contacto real
+const imageUrl = "/path/to/your/image.jpg"; // Cambia esto por la ruta a tu imagen
+---
+
+<footer class="footer">
+    <img src={imageUrl} alt="Foto de los Novios" class="footer-image" />
+    <p>
+        ¿Tienes alguna pregunta? Escríbenos a <a href={`mailto:${contactEmail}`}
+            >{contactEmail}</a>
+    </p>
+    <p>&copy; {year} Todos los derechos reservados.</p>
+</footer>
+
+<style>
+    .footer {
+        background-color: #f0f0f0;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+    }
+
+    .footer img {
+        max-height: 100px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: #007bff;
+    }
+</style>

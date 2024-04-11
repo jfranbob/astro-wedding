@@ -1,0 +1,76 @@
+---
+// Componente Timeline.astro
+const timelineEvents = [
+    {
+        time: "3:00 PM",
+        title: "Ceremonia",
+        description:
+            "La ceremonia tendrá lugar en el Jardín de las Rosas, donde intercambiaremos nuestros votos rodeados de naturaleza y seres queridos.",
+        location: "Jardín de las Rosas - Calle Flores, 123",
+    },
+    {
+        time: "4:30 PM",
+        title: "Sesión de Fotos",
+        description:
+            "Mientras disfrutan de un cóctel, nosotros aprovecharemos para tomar algunas fotos especiales en diferentes lugares del recinto.",
+        location: "Varios lugares del recinto",
+    },
+    {
+        time: "6:00 PM",
+        title: "Cena",
+        description:
+            "Nos reuniremos en el Salón de Celebraciones para disfrutar de una deliciosa cena y brindar por este nuevo capítulo.",
+        location: "Salón de Celebraciones - Calle Principal, 456",
+    },
+    {
+        time: "8:00 PM",
+        title: "Baile y Fiesta",
+        description:
+            "Para cerrar con broche de oro, abriremos la pista de baile y celebraremos hasta que los pies digan basta.",
+        location: "Pista de Baile - Al lado del Salón de Celebraciones",
+    },
+    // Agrega más eventos según sea necesario
+];
+---
+
+<div class="timeline">
+    {
+        timelineEvents.map((event) => (
+            <div class="timeline-event">
+                <div class="time">{event.time}</div>
+                <div class="details">
+                    <h3>{event.title}</h3>
+                    <p>{event.description}</p>
+                    <p class="location">{event.location}</p>
+                </div>
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .timeline-event {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .time {
+        font-weight: bold;
+    }
+
+    .details h3 {
+        margin: 0;
+    }
+
+    .location {
+        font-style: italic;
+        color: #666;
+    }
+</style>
