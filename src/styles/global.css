@@ -143,21 +143,38 @@ textarea {
   margin-top: 40px;
 }
 
-/* Media queries para responsividad */
+/* Media queries para dispositivos móviles */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 24px;
-    /* Reduce el tamaño de la fuente para títulos grandes en móviles */
+  body {
+    font-size: 14px; /* Reducir el tamaño de fuente general para mejorar la legibilidad */
   }
 
-  .container {
-    padding: 10px;
-    /* Reduce el padding en dispositivos móviles para maximizar el espacio */
+  h1, h2, h3 {
+    font-size: 1.5rem; /* Reducir el tamaño de los títulos */
+  }
+
+  .container,
+  .button {
+    padding: 10px; /* Reducir el padding para usar el espacio de manera más eficiente */
+  }
+
+  .header,
+  .footer {
+    padding: 20px 10px; /* Ajustar el padding en cabecera y pie de página */
+  }
+
+  .menu {
+    font-size: 1rem; /* Ajustar el tamaño de fuente del menú */
+  }
+}
+
+/* Media queries para dispositivos muy pequeños */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem; /* Tamaño más pequeño para títulos en teléfonos muy pequeños */
   }
 
   .button {
-    padding: 8px 12px;
-    /* Ajusta el tamaño de los botones en móviles */
-    font-size: 14px;
+    font-size: 0.8rem; /* Reducir el tamaño de fuente en botones para que ocupen menos espacio */
   }
 }
